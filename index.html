@@ -20,25 +20,29 @@ The <meta> element specify the character set, page description, keywords, author
 <head>
   <title>Welcome to Faith's Dream</title>      
   <meta charset="UTF-8">                        
-  <meta name="description" content="Portfolio>
+  <meta name="description" content="Portfolio">
   <meta name="keywords" content="HTML, CSS, JavaScript">
   <meta name="author" content="Faith Lewis">  
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+
+
 </head>
 
+<header>
+  <h1 id = "header">Meet The Dream</h1>
 
-<!-- THE BODY ELEMENT
-  
-The "body" of an HTML document contains all the page's visible content.
- After the closing </head> tag, begin the body of your page by adding the opening <body> element.
- Close the body of your page by adding the closing </body> element right before the closing </html> tag
- Make sure all of the following content is inside the <body> tags, in this order:
- Your name in an h1 element
- The word 'About' in an h2 element
- A paragraph about you in a p element
- The word 'Experience' in an h2 element
- Your listed experiences in a ul element, with each individual item in a li element.
- The word 'Connect' in an h2 element
- Your social media links in a elements, and you can also wrap them in ul and li tags if you wish. Include at least two, your GitHub and LinkedIn profiles. -->
+<div class="navcontainer">
+  <nav>
+      <a href="./index.html">About</a>
+      <a href="./history.html">Projects</a>
+      <a href="./culture.html">Connect</a>
+  </nav>
+  </div>
+
+</header>
 
 <body>
   <h1><strong>Faith M. Lewis</strong></h1>
@@ -76,14 +80,20 @@ The "body" of an HTML document contains all the page's visible content.
     </ul>
 </section>
 
+
  <section id="Connect">
  <h2><strong>Let's Connect!</strong></h2>
+ </section>
+
+ <div class="connect-container">
     <ul>
      <li><a href= https://faithlewis8.wixsite.com/faithmarie target="_blank">Visit My Website</a></li>
      <li><a href=https://github.com/phoibemarie target="_blank">Check Out My Github</a></li>
      <li><a href=https://www.linkedin.com/in/faith-m-mph-058271179 target="_blank">Connect on LinkedIn</a></li>
     </ul>
-  </section>
+  </div>
  
 </body>
+
+<footer>Footer</footer>
 </html>
