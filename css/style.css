@@ -131,12 +131,27 @@ h1{
   border-radius: 10px;          /* rounded corners*/
 }
 
+
+
 /* Skills and Languages Styles */
 .skills-header{
   font-family: "Rubik Dirt", system-ui;
   font-size: 2em;
   text-align: center;
 }
+
+/*Targets the div class that contains the ul element and nested li elements  */
+.skills-flex{                 
+  text-align: center; 
+  list-style: none; /* no bullets*/
+}
+
+#skillsList li{    
+  font-size: 1.75rem;      
+  display: inline-block; /* list items appear in line*/
+  margin-right: 1em;
+}
+
 
 
 /* Projects Info Styles */
