@@ -36,11 +36,10 @@ footerDate.appendChild(copyright); //this adds the copyright element as a child 
 
 //creating a skills array for the skills section of the html page 
 
-const skills = ["HTML", "CSS", "JavaScript", "Project Management", "Marketing & Communications"];
+const skills = ["☆", "HTML", "☆", "CSS", "☆", "JavaScript","☆", "Project Management", "☆", "Marketing & Communications", "☆"];
 
 const skillsSection = document.getElementById("Skills") //select the skills section in the document using the id, store in a var
-const skillsList = skillsSection.querySelector("skillsList"); //create a var for the ul element in the html 
-
+const skillsList = skillsSection.querySelector("#skillsList"); //create a var for the ul element in the html 
 
 //  Create a variable named skillsSection and use "DOM Selection" to select the skills section by id
 // hint: querySelector or getElementById method
@@ -48,7 +47,8 @@ const skillsList = skillsSection.querySelector("skillsList"); //create a var for
 
 //create a for loop to iterate over the skills array, then create a skill variable inside to create a new list item
 for(let i=0; i < skills.length; i++){
-     const skill = skillsList.createElement('li');  //creating our list element within the skillsList ul 
+
+     const skill = document.createElement('li');  //creating our list element within the skillsList ul 
      skill.textContent = skills[i];                  //adding the value at the index 
      skillsList.appendChild(skill);                 //append to the page
 }; 
