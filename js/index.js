@@ -38,7 +38,7 @@ footerDate.appendChild(copyright); //this adds the copyright element as a child 
 
 const skills = ["☆", "HTML", "☆", "CSS", "☆", "JavaScript","☆", "Project Management", "☆", "Marketing & Communications", "☆"];
 
-const skillsSection = document.getElementById("Skills") //select the skills section in the document using the id, store in a var
+const skillsSection = document.getElementById("skills") //select the skills section in the document using the id, store in a var
 const skillsList = skillsSection.querySelector("#skillsList"); //create a var for the ul element in the html 
 
 //  Create a variable named skillsSection and use "DOM Selection" to select the skills section by id
