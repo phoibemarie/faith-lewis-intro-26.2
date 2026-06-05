@@ -70,3 +70,41 @@ skillsList.style.color = 'rgb(239, 242, 249)';
 
 //Q: Why are we creating a variable instead of just work directly on the skill section; is it because skills in a variable? Are we turning
 //the skills section into a variable, so it can be used in the function?
+
+//HANDLING A MESSAGE FORM SUBMISSION
+
+//create a variable that uses DOM selection to select the name attribute of the message form
+const messageForm = document.querySelector('form[name="leave-message"]');
+
+//add an event listener that handles the "submit" event
+//inside the callback function, create three new variables (one for each of the three form fields) and retrieve the value from the event
+messageForm.addEventListener('submit', event => {
+     event.preventDefault();
+
+     const usersName = event.target.usersName.value;    //we use .target because we have already referenced the form
+     const usersEmail = event.target.usersEmail.value;            //It means Get the name of the element where the event occurred: shorthand for the query process
+     const usersMessage = event.target.usersMessage.value;
+
+     console.log("Name:",usersName, "Email:", usersEmail, "Message:",usersMessage);
+
+     const messageSection = document.getElementById("messages")
+     const messageList = messageSection.querySelector("#message-list")
+     const newMessage = document.createElement('li');
+
+     newMessage.innerHTML = `<a href="mailto:${usersEmail}">${usersName}</a>
+     <span> ${usersMessage}</span>`;
+
+     const removeButton = document.createElement("button");
+     removeButton.innerText = "remove";
+     removeButton.type = "button";
+
+     removeButton.addEventListener("click", (event) => {
+  const entry = event.target.parentNode;
+  entry.remove();
+     });
+
+     newMessage.appendChild(removeButton);
+     messageList.appendChild(newMessage);
+     messageForm.reset(); //clears form fields after submission
+
+} );

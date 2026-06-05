@@ -43,6 +43,7 @@ The <meta> element specify the character set, page description, keywords, author
       <a href="#Skills">Skills</a>
       <a href="#Projects">Projects</a>
       <a href="#Connect">Connect</a>
+      <a href="#message">Leave a Message</a>
   </nav>
   </div>
 
@@ -118,6 +119,41 @@ The <meta> element specify the character set, page description, keywords, author
     <button class="cloud"><a href=https://www.linkedin.com/in/faith-m-mph-058271179 target="_blank">Connect on LinkedIn</a></button>
   </div>
  
+<section id = "message-form">
+  <div class="message-header">
+    <h2><strong>Leave A Message</strong></h2>
+  </div>
+  <div class ="form">
+    <form name="leave-message">
+
+        <div class="form-group">
+          <label for="usersName">Full Name</label><br>
+          <input type="text" id="usersName" name="usersName" required="true"><br>
+        </div>
+        
+        <div class="form-group">
+          <label for="usersEmail">Email</label><br>
+          <input type="email" id="usersEmail" name="usersEmail"><br>
+        </div>
+
+        <div class="form-group">
+            <label for="usersMessage">Message</label><br>
+            <textarea name="usersMessage" id="usersMessage" required="true"></textarea><br>
+        </div>
+
+         
+        <button type ='submit'>Submit</button>
+
+    </form>
+  </div>
+</section>
+
+<section id="messages">
+  <div class ="messages-header">
+    <h2><strong>Messages</strong></h2>
+    <ul id="message-list"></ul>
+  </div>
+</section>
 
 
   
