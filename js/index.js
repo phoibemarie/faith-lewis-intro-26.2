@@ -74,7 +74,7 @@ skillsList.style.color = 'rgb(239, 242, 249)';
 //HANDLING A MESSAGE FORM SUBMISSION
 
 //create a variable that uses DOM selection to select the name attribute of the message form
-const messageForm = document.querySelector('form[name="leave-message"]');
+const messageForm = document.querySelector('form[name="leave_message"]');
 
 //add an event listener that handles the "submit" event
 //inside the callback function, create three new variables (one for each of the three form fields) and retrieve the value from the event
