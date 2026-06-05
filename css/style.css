@@ -151,6 +151,7 @@ h1{
   font-size: 1.75rem;      
   display: inline-block; /* list items appear in line*/
   margin-right: 1em;
+  margin-left: 0.25em;
 }
 
 
@@ -168,6 +169,8 @@ h1{
   font-family: "Rubik Dirt", system-ui;
   font-size: 2em;
 }
+
+
 .connect-container {
     text-align: center;
     font-size: 0.5rem;
@@ -206,9 +209,99 @@ h1{
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2), 0 0 35px rgba(0, 0, 0, 0.2);
 }
 
+/* Contact message form styles */
+.message-header{
+  text-align: center;
+  font-family: "Rubik Dirt", system-ui;
+  font-size: 2em;
+}
+
+form{
+  width: 100%;
+  max-width: 900px;
+  margin-left: 12em;
+  font-size: 1.5em;
+  /* border: solid 2px red; */
+}
+
+/* .form-group{
+  position:relative;
+} */
+
+/* .form-group label {
+
+} */
 
 
+input{
+  /* box-sizing: border-box; this is used to size content, border, and padding altogether. It tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements. */
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-bottom: 5px solid rgb(200, 125, 221);   /*only shows a border on the bottom of the container*/
+  border-radius: 8px;
+}
 
+/* styling the message box */
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  margin-top: 1.5em;
+  border:none;
+  border-bottom: 5px solid rgb(200, 125, 221);
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.form button{
+/* input[type=button]{ */
+  background-color: #b587cf;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.form button:hover{
+  background-color: #04AA6D;
+}
+
+.messages-header{
+  text-align: center;
+  font-family: "Rubik Dirt", system-ui;
+  font-size: 2em;
+}
+
+#messages ul {
+  list-style: none;
+  padding: 0;
+}
+
+#messages li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color:#fff
+}
+
+#messages span {
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+#messages button {
+  margin-left: 1rem;
+}
 
 footer {
   background-color: rgb(14, 14, 15);
