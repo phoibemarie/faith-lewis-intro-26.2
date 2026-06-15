@@ -134,7 +134,7 @@ fetch("https://api.github.com/users/phoibemarie/repos") //this is a request in p
   })  
      .then(data => {                  //create a function that takes the parsed response and store it in a variable named repositories. each .then() takes the return value of the previous .then()
           const repositories = data
-          // console.log(repositories);                               //to better see the data returned from your API fetch
+          console.log(repositories);                               //to better see the data returned from your API fetch
           const projectSection = document.getElementById("Projects");
           const projectsList = projectSection.querySelector("#projectsList");
 
@@ -149,7 +149,6 @@ fetch("https://api.github.com/users/phoibemarie/repos") //this is a request in p
          console.error('An error occurred:', error);
  });
 
- projectsList.style.color = 'rgb(239, 242, 249)';
   
 //CREATING DOM FOR THE PROJECT SECTION
 //  Create a variable named projectSection; using "DOM Selection" to select the projects section by id
