@@ -163,6 +163,19 @@ h1{
    font-size: 2em;
 }
 
+.projects-flex{                 
+  text-align: center; 
+  list-style: none; /* no bullets*/
+  display: flex;
+}
+
+#projectsList li{    
+  font-size: 1.75rem;      
+  display: inline-block; /* list items appear in line*/
+  margin-right: 1em;
+  margin-left: 0.25em;
+}
+
 /* Contact info styles */
 .connect-header{
   text-align: center;
@@ -307,4 +320,114 @@ footer {
   background-color: rgb(14, 14, 15);
   padding: 8px;
   color: rgb(250, 239, 239); 
+}
+
+/* =========================
+   TABLET (≤ 900px)
+========================= */
+@media (max-width: 900px) {
+
+  body {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  #headertext {
+    font-size: 4em;
+  }
+
+  .bio-container {
+    grid-template-columns: 1fr; /* stack instead of side-by-side */
+  }
+
+  .biotext-container {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .experienceimg {
+    gap: 20px;
+  }
+
+  .experienceimg img {
+    width: 100%;
+    height: auto;
+  }
+
+  nav a {
+    display: block;
+    padding: 1em;
+  }
+
+  .connect-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    margin-left: 0;
+    padding: 0 1em;
+  }
+}
+
+@media (max-width: 600px) {
+
+  body {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  #headertext {
+    font-size: 2.5em;
+  }
+
+  .navcontainer {
+    padding: 1em;
+  }
+
+  nav a {
+    padding: 0.75em;
+    font-size: 0.9rem;
+  }
+
+  .bio {
+    font-size: 1.5rem;
+  }
+
+  .bio-container {
+    margin: 1em;
+  }
+
+  .experience-header,
+  .skills-header,
+  .projects-header,
+  .connect-header,
+  .message-header,
+  .messages-header {
+    font-size: 1.4em;
+  }
+
+  .experienceimg {
+    flex-direction: column;
+  }
+
+  .experienceimg img {
+    height: auto;
+  }
+
+  #skillsList li,
+  #projectsList li {
+    font-size: 1.2rem;
+    display: block; /* stack items */
+    margin: 0.5em 0;
+  }
+
+  .connect-container a {
+    margin: 10px;
+    padding: 1em;
+  }
+
+  form {
+    font-size: 1rem;
+  }
 }

@@ -108,3 +108,69 @@ messageForm.addEventListener('submit', event => {
      messageForm.reset(); //clears form fields after submission
 
 } );
+
+//FETCH API 
+// 1. Using the Fetch API, create a "GET" request to https://api.github.com/users/{GITHUB_USERNAME}/repos
+//2.  Chain a then method to your fetch call and pass it a function that returns the response JSON data
+//        With then() we are promise chaining. We are saying after this, do this, and so on and so on.
+//        This is what is allowing us to asynchronously handle the request sent to the endpoint. This promise chaining is more explicit and allows us to handle that promise in multiple ways before returning it.
+//
+// ALTERNATIVE SIMPLE VERSION:
+// fetch("https://api.github.com/users/YOUR_USERNAME/repos")
+//   .then(response => {
+//     return response.json();
+//   });
+
+
+
+  //Version for the entire repo without filtering for the featured repos
+
+fetch("https://api.github.com/users/phoibemarie/repos") //this is a request in progress, a promise. "Im going to contact the server." It designates what will happen in the future and lets us know whether or not we got a response
+     .then(response => {                      //create a then method withe a callback function that will return our json
+          if (!response.ok) {                 //not a promise. the .ok method checks if the response is valid
+               throw new Error('Request failed');
+          }
+    return response.json();                   //Otherwise, Parse the response as JSON
+  })  
+     .then(data => {                  //create a function that takes the parsed response and store it in a variable named repositories. each .then() takes the return value of the previous .then()
+          const repositories = data
+          // console.log(repositories);                               //to better see the data returned from your API fetch
+          const projectSection = document.getElementById("Projects");
+          const projectsList = projectSection.querySelector("#projectsList");
+
+          for(let i=0; i < repositories.length; i++){
+          const project = document.createElement("li");
+          project.textContent = repositories[i].name;
+          projectsList.appendChild(project);
+          }
+     })
+     
+     .catch(error => {
+         console.error('An error occurred:', error);
+ });
+
+ projectsList.style.color = 'rgb(239, 242, 249)';
+  
+//CREATING DOM FOR THE PROJECT SECTION
+//  Create a variable named projectSection; using "DOM Selection" to select the projects section by id
+//  Create a variable named projectList; using "DOM Selection" query the projectSection (instead of the entire document) to select the element
+//  Create a for loop to iterate over your repositories Array, starting at index 0
+//  Inside the loop, create a variable named project to make a new list item (li) element
+// hint: createElement method
+//  On the next line, set the inner text of your project variable to the current Array element's name property
+// hint: access the Array element using bracket notation
+//  On the next line, append the project element to the projectList element
+// hint: appendChild method
+//  Save and refresh your browser (or just check your browser for changes if using live extension)
+// You should see your list of repositories beneath the "Projects" heading on your portfolio site
+
+
+// const projectSection = document.getElementById("Projects");
+// const projectsList = projectSection.querySelector("#projectsList");
+
+// for(let i=0; i < repositories.length; i++){
+//      const project = projectsList.createElement("li");
+//      project.textContent = repositories[i].name;
+//      projectsList.appendChild(project);
+// }
+
