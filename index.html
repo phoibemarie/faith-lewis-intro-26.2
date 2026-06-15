@@ -43,7 +43,7 @@ The <meta> element specify the character set, page description, keywords, author
       <a href="#Skills">Skills</a>
       <a href="#Projects">Projects</a>
       <a href="#Connect">Connect</a>
-      <a href="#message">Leave a Message</a>
+      <a href="#message-form">Leave a Message</a>
   </nav>
   </div>
 
@@ -104,6 +104,11 @@ The <meta> element specify the character set, page description, keywords, author
   <div class = projects-header>
  <h2><strong>Projects</strong></h2>
    </div>
+  <div>
+    <div class = "projects-flex">
+     <ul id= "projectsList"></ul>
+   </div>
+  </div>
  </section>
 
 
@@ -124,7 +129,7 @@ The <meta> element specify the character set, page description, keywords, author
     <h2><strong>Leave A Message</strong></h2>
   </div>
   <div class ="form">
-    <form name="leave-message">
+    <form name="leave_message">
 
         <div class="form-group">
           <label for="usersName">Full Name</label><br>
@@ -133,7 +138,7 @@ The <meta> element specify the character set, page description, keywords, author
         
         <div class="form-group">
           <label for="usersEmail">Email</label><br>
-          <input type="email" id="usersEmail" name="usersEmail"><br>
+          <input type="email" id="usersEmail" name="usersEmail" required="true"><br>
         </div>
 
         <div class="form-group">
