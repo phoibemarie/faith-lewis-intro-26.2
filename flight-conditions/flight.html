@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="flight.css">
+<body>
+
+<nav>
+     <a href="../index.html">Back to Portfolio</a>
+</nav>
+
+<div class="container">
+
+    <h1>Flight Conditions Checker</h1>
+
+    <div class="controls">
+
+        <label for="airport">Choose an Airport</label>
+
+        <select id="airport">
+            <option value="CVG">Cincinnati (CVG)</option>
+            <option value="DAY">Dayton (DAY)</option>
+            <option value="CMH">Columbus (CMH)</option>
+        </select>
+
+        <div class="button-group">
+            <button id="conditionsBtn">
+                Current Conditions
+            </button>
+
+            <button id="windBtn">
+                Wind Conditions
+            </button>
+        </div>
+
+    </div>
+
+    <div id="results">
+        Select an airport and click a button.
+    </div>
+
+</div>
+
+<script src="flight.js"></script>
+
+</body>
