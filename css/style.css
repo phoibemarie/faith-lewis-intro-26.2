@@ -39,6 +39,11 @@ body {
   font-style: normal;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* prevents overlap on smaller screens */
+}
 
 /* styling the nav container */
 .navcontainer{
@@ -53,19 +58,19 @@ body {
 /* Style links in topnav */
 /* text decoration removes the hyperlinks underline */
 nav a {
-  /* display: block; */
   color: #f1f1f1;
-  padding: 2em 5em 2em 5em;
-  text-decoration: none;   
-  font-family:  "Rubik Dirt", system-ui;
-  margin: auto;
+  padding: 1em 2em;
+  text-decoration: none;
+  font-family: "Rubik Dirt", system-ui;
+  margin: 0.5em;
+  display: block;
 }
+
 
 /* adding hover effects for the links in nav */
 nav a:hover {
   background-color: lavender;
   color: black;
-  padding: 2em 5em 2em 5em;
 }
 
 .bio{
